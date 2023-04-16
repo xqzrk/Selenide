@@ -1,4 +1,5 @@
 import com.codeborne.selenide.Configuration;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
 
@@ -12,7 +13,15 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
 
+
 public class AppCardDeliveryTest {
+
+    @BeforeAll
+    public static void setUp() {
+        Configuration.headless = true;
+        Configuration.browser = "chrome";
+    }
+
 
     public String meet() {
         Calendar calendar = new GregorianCalendar();
