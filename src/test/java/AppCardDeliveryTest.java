@@ -16,13 +16,6 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class AppCardDeliveryTest {
 
-    @BeforeAll
-    public static void setUp() {
-        Configuration.headless = true;
-        Configuration.browser = "chrome";
-    }
-
-
     public String meet() {
         Calendar calendar = new GregorianCalendar();
         calendar.add(Calendar.DAY_OF_MONTH, 3);
